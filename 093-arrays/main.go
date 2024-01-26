@@ -8,9 +8,11 @@ func main() {
 	a := [3]int{42, 43, 44}
 	fmt.Println(a)
 
+	// ... means the compiler will count the elements
 	b := [...]string{"Hello", "Gophers!"}
 	fmt.Println(b)
 
+	// array literal that will store 2 values of type of int in the array
 	var c [2]int
 	c[0] = 7
 	c[1] = 8
@@ -18,8 +20,10 @@ func main() {
 
 	fmt.Printf("%T\n", a)
 	fmt.Printf("%T\n", c)
-	// c = a
+	// c = a - will not work because they are different types
 
+	// own block scope for variables
+	// fmt.Println(ni) - will return undefined because its outside of the block level scope
 	{
 		// declare a variable of type [7]int
 		var ni [7]int

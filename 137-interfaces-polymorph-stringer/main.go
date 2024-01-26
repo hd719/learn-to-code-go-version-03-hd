@@ -16,7 +16,15 @@ func (b book) String() string {
 type count int
 
 func (c count) String() string {
-	return fmt.Sprint("This is the number ", strconv.Itoa(int(c)))
+	return fmt.Sprint("This is the number ", strconv.Itoa(int(c))) // convert the type count to the type int then to a string
+}
+
+type Stringer interface {
+	String() string
+}
+
+func foo(s Stringer) {
+	fmt.Println(s.String())
 }
 
 func main() {
@@ -28,6 +36,8 @@ func main() {
 
 	fmt.Println(b)
 	fmt.Println(n)
+
+	foo(b)
 }
 
 // func (r receiver) identifier(p parameter(s)) (return(s)) { code }

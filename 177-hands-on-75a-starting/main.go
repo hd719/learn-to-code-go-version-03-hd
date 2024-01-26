@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 var (
 	a, b, c *string
 	d       *int
@@ -17,5 +19,8 @@ func init() {
 }
 
 func main() {
-
+	fmt.Print("a: ", *a, "\n")
+	fmt.Print("b: ", *b, "\n")
+	fmt.Print("c: ", *c, "\n")
+	fmt.Print("d: ", *d, "\n")
 }

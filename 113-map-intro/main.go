@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// Dictionary in Python or Object in JS
 	am := map[string]int{
 		"Todd":   42,
 		"Henry":  16,
@@ -13,7 +14,7 @@ func main() {
 
 	fmt.Println(am)
 	fmt.Printf("%#v\n", am)
-	
+
 	an := make(map[string]int)
 	an["Lucas"] = 28
 	an["Steph"] = 37
@@ -21,8 +22,6 @@ func main() {
 	fmt.Printf("%#v\n", an)
 
 	fmt.Println(len(an))
-
-
 
 	/*
 		m := map[string]int{

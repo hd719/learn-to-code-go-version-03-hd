@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Methods attach to a type (specifically, a struct)
 type person struct {
 	first string
 }
@@ -14,7 +15,7 @@ func main() {
 	p1 := person{
 		first: "James",
 	}
-	
+
 	p2 := person{
 		first: "Jenny",
 	}

@@ -10,6 +10,7 @@ type person struct {
 
 type foo int
 
+// Composition is embedding a type into another type (similar to inheritance)
 func main() {
 	var a foo = 42
 	fmt.Println(a)
@@ -23,7 +24,6 @@ func main() {
 		first: "James",
 		last:  "Bond",
 		age:   32,
-
 	}
 
 	p2 := person{
@@ -36,8 +36,9 @@ func main() {
 	fmt.Printf("%T \n", p2)
 	fmt.Printf("%#v \n", p2)
 
-	p2 = p1
+	p2 = p1 // This is not allowed because p1 is an anonymous struct and p2 is a person struct
 	fmt.Printf("%T \n", p2)
 	fmt.Printf("%#v \n", p2)
+	// returns
 
 }

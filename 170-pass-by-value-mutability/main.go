@@ -20,7 +20,7 @@ func main() {
 	intDelta(&a)
 	fmt.Println(a)
 
-	xi := []int{1,2,3,4}
+	xi := []int{1, 2, 3, 4}
 	fmt.Println(xi)
 	sliceDelta(xi)
 	fmt.Println(xi)

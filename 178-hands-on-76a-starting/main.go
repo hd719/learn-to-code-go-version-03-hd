@@ -1,8 +1,8 @@
 package main
 
-// uncomment this code to run it
+import "fmt"
 
-/*
+// uncomment this code to run it
 
 type dog struct {
 	first string
@@ -10,6 +10,10 @@ type dog struct {
 
 func (d *dog) run() {
 	fmt.Println("My name is", d.first, "and I'm running.")
+}
+
+func (d dog) walk() {
+	fmt.Println("My name is", d.first, "and I'm walking.")
 }
 
 type youngin interface {
@@ -33,5 +37,3 @@ func main() {
 	youngRun(d2)
 
 }
-
-*/

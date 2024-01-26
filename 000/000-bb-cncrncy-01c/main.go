@@ -20,4 +20,3 @@ func main() {
 
 	fmt.Println("i'm in goroutine 1 - main")
 }
-		

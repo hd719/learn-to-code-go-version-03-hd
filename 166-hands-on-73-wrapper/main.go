@@ -10,12 +10,15 @@ func main() {
 }
 
 func doWork() {
-	for i := 0; i < 2_000; i++ {
+	for i := 0; i < 2000; i++ {
 		fmt.Println(i)
 	}
 }
 
-func timeFunc(f func()) {
+type funcType func()
+
+// func timeFunc(f func()) {
+func timeFunc(f funcType) {
 	start := time.Now()
 	f()
 	elapsed := time.Since(start)

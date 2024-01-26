@@ -14,6 +14,8 @@ func addF(a, b float64) float64 {
 	return a + b
 }
 
+// note
+
 type myNumbers interface {
 	constraints.Integer | constraints.Float
 }

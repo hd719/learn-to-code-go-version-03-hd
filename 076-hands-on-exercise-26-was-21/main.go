@@ -6,7 +6,7 @@ import (
 )
 
 func init() {
-	fmt.Println("This is from the init function")
+	fmt.Println("This is where initialization for my program occurs")
 }
 
 func main() {

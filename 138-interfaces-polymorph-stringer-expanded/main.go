@@ -20,7 +20,7 @@ func (c count) String() string {
 	return fmt.Sprint("This is the number ", strconv.Itoa(int(c)))
 }
 
-func logInfo(s fmt.Stringer) {
+func logInfo(s fmt.Stringer) { // takes a string type as a parameter that implements the String() method
 	log.Println("LOG FROM 138", s.String())
 }
 

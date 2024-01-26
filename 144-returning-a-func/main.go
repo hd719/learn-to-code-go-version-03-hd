@@ -7,8 +7,10 @@ func main() {
 	x := foo()
 	fmt.Println(x)
 
-	y := bar()
-	fmt.Println(y())
+	y := bar(2)
+	z := y()
+	fmt.Println("Chained", bar(2)())
+	fmt.Println(z)
 
 	fmt.Printf("%T\n", foo)
 	fmt.Printf("%T\n", bar)
@@ -19,8 +21,8 @@ func foo() int {
 	return 42
 }
 
-func bar() func() int {
+func bar(h int) func() int {
 	return func() int {
-		return 43
+		return h * 43
 	}
 }

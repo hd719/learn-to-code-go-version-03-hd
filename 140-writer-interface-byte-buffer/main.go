@@ -30,12 +30,12 @@ func main() {
 
 	b := bytes.NewBufferString("Hello ")
 	fmt.Println(b.String())
-	b.WriteString("Gophers!")
+	b.WriteString("gophers!")
 	fmt.Println(b.String())
 	b.Reset()
-	b.WriteString("It's Thursday")
+	b.WriteString("Its a new string")
 	fmt.Println(b.String())
-	
-	b.Write([]byte("Happy Happy"))
+	b.Reset()
+	b.Write([]byte("Hello gophers!"))
 	fmt.Println(b.String())
 }

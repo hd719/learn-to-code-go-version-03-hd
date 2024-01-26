@@ -6,7 +6,7 @@ func main() {
 	a := []int{0, 1, 2, 3, 4, 5}
 	// b := a
 	b := make([]int, 6)
-	copy(b, a)
+	copy(b, a) // This copies the values from a to b
 
 	fmt.Println("a ", a)
 	fmt.Println("b ", b)

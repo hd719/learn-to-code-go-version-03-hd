@@ -9,6 +9,8 @@ type person struct {
 }
 
 func main() {
+
+	// Anonymous struct has no name and is only used once
 	p1 := struct {
 		first string
 		last  string

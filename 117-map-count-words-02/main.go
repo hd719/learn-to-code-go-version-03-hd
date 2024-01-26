@@ -17,7 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("error: %s", err)
 	}
-	defer f.Close()
+	defer f.Close() // close the file when we're done
 
 	// The frequency of words in the file
 	words, xs, err := freq(f)
@@ -50,7 +50,7 @@ func main() {
 func freq(r io.Reader) (map[string]int, []string, error) {
 	var i int
 	xs := make([]string, 0, 1_000)
-	fmt.Println("LENGTH of the slice",len(xs))
+	fmt.Println("LENGTH of the slice", len(xs))
 	fmt.Println("CAPACITY of the slice", cap(xs))
 	// Create a map to store word frequencies
 	wordFreq := make(map[string]int)
@@ -62,7 +62,7 @@ func freq(r io.Reader) (map[string]int, []string, error) {
 	// Read each word and update the word frequencies
 	for s.Scan() {
 		word := strings.ToLower(s.Text())
-		wordFreq[word]++
+		wordFreq[word]++ // ******increment the frequency of the word********
 		if i < 1_000 {
 			word = strings.Replace(word, `"`, "", -1)
 			word = strings.Replace(word, `“`, "", -1)
@@ -76,7 +76,7 @@ func freq(r io.Reader) (map[string]int, []string, error) {
 	}
 
 	fmt.Println(xs)
-	fmt.Println("LENGTH of the slice",len(xs))
+	fmt.Println("LENGTH of the slice", len(xs))
 	fmt.Println("CAPACITY of the slice", cap(xs))
 	return wordFreq, xs, nil
 }

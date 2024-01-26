@@ -7,19 +7,19 @@ func main() {
 	fmt.Println(x)
 	fmt.Println(len(x))
 	fmt.Println(cap(x))
-	
+
 	x = append(x, 52)
 	fmt.Println(x)
 	fmt.Println(len(x))
 	fmt.Println(cap(x))
-	
+
 	x = append(x, 53, 54, 55)
 	fmt.Println(x)
 	fmt.Println(len(x))
 	fmt.Println(cap(x))
-	
+
 	y := []int{56, 57, 58, 59, 60}
-	x = append(x, y...)
+	x = append(x, y...) // ... is the variadic parameter which takes a slice and expands it into individual elements (destructuring in JS)
 	fmt.Println(x)
 	fmt.Println(len(x))
 	fmt.Println(cap(x))

@@ -10,6 +10,7 @@ func addF(a, b float64) float64 {
 	return a + b
 }
 
+// Type set Interface
 type myNumbers interface {
 	int | float64
 }
